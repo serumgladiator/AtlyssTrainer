@@ -4,7 +4,7 @@
 
 Трейнер для **ATLYSS** на BepInEx 5 с меню прямо в игре.
 
-![Скриншот](docs/screenshot.png)
+![Скриншот](docs/preview.png)
 
 Названия предметов и врагов читаются из запущенной игры, поэтому мод корректно работает с установленным русификатором.
 
@@ -73,7 +73,7 @@
 ## Установка
 
 1. Установите **BepInEx 5 (x64, Mono)** в папку ATLYSS.
-2. Скопируйте `AtlyssTrainer.dll` в `ATLYSS\BepInEx\plugins\`.
+2. Скачайте `AtlyssTrainer.dll` из [последнего релиза](https://github.com/serumgladiator/AtlyssTrainer/releases/latest) и скопируйте в `ATLYSS\BepInEx\plugins\`.
 3. Запустите игру и нажмите **Insert**.
 
 ## Клавиши

@@ -4,7 +4,7 @@
 
 A BepInEx 5 trainer for **ATLYSS** with an in-game menu.
 
-![Screenshot](docs/screenshot.png)
+![Screenshot](docs/preview.png)
 
 The menu reads item and enemy names directly from the running game, so it works correctly with any installed translation mod.
 
@@ -73,7 +73,7 @@ A separate tab with risky actions, locked behind a warning and a confirmation ch
 ## Installation
 
 1. Install **BepInEx 5 (x64, Mono)** into the ATLYSS folder.
-2. Copy `AtlyssTrainer.dll` into `ATLYSS\BepInEx\plugins\`.
+2. Download `AtlyssTrainer.dll` from the [latest release](https://github.com/serumgladiator/AtlyssTrainer/releases/latest) and copy it into `ATLYSS\BepInEx\plugins\`.
 3. Launch the game and press **Insert**.
 
 ## Hotkeys
