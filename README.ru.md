@@ -1,8 +1,8 @@
-# Atlyss Trainer
+﻿# Atlyss Trainer
 
 [English version](README.md)
 
-Чит-меню (тренер) для **ATLYSS** на BepInEx 5 в стиле кряков 2000-х: моноширинный шрифт, жёсткие пиксельные рамки, чёрное полупрозрачное окно и анимированный радужный ASCII-баннер.
+Трейнер для **ATLYSS** на BepInEx 5 с меню прямо в игре.
 
 ![Скриншот](docs/screenshot.png)
 

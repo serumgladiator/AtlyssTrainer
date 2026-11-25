@@ -2,7 +2,7 @@
 
 [Русская версия](README.ru.md)
 
-A BepInEx 5 trainer for **ATLYSS**, built as an in-game menu in the style of 2000s cracktros: monospace text, hard pixel frames, a black translucent window and an animated rainbow ASCII banner.
+A BepInEx 5 trainer for **ATLYSS** with an in-game menu.
 
 ![Screenshot](docs/screenshot.png)
 
