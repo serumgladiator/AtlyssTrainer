@@ -1,0 +1,9 @@
+dist/
+tools/api.txt
+tools/types.txt
+tools/ApiDump/*.exe
+tools/ApiDump/*.dll
+tools/ApiDump/*.txt
+tools/ApiDump/*.pdb
+*.user
+.vs/
