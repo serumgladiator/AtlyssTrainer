@@ -102,17 +102,22 @@ namespace AtlyssTrainer
             _builtHeight = heightKey;
 
             float advance = 7.2f;
-            CharacterInfo info;
+            float lineHeight = 14f;
 
-            if (Ui.StarFont != null &&
-                Ui.StarFont.GetCharacterInfo('M', out info, 12, FontStyle.Normal) &&
-                info.advance > 0.5f)
-            {
-                advance = info.advance;
-            }
+            TextGenerator gen = new TextGenerator();
+            TextGenerationSettings settings = Stars.Text.GetGenerationSettings(Vector2.zero);
+            settings.generationExtents = Vector2.zero;
+            settings.horizontalOverflow = HorizontalWrapMode.Overflow;
+            settings.verticalOverflow = VerticalWrapMode.Overflow;
 
-            _columns = Mathf.Max(10, Mathf.CeilToInt(width / advance) + 1);
-            _rows = Mathf.Max(2, Mathf.CeilToInt(height / 14f));
+            float measuredAdvance = gen.GetPreferredWidth(new string('M', 40), settings) / 40f;
+            float measuredLine = gen.GetPreferredHeight("M\nM", settings) - gen.GetPreferredHeight("M", settings);
+
+            if (measuredAdvance > 0.5f) advance = measuredAdvance;
+            if (measuredLine > 0.5f) lineHeight = measuredLine;
+
+            _columns = Mathf.Max(10, Mathf.CeilToInt(width / advance) + 2);
+            _rows = Mathf.Max(2, Mathf.CeilToInt(height / lineHeight) + 1);
 
             int total = _columns * _rows;
 
@@ -311,11 +316,21 @@ namespace AtlyssTrainer
                     p._pTargeting._targetedEntity = null;
                     p._pTargeting.Network_syncSelectedEntity = null;
                 }
+
+                ResetAimCamera();
             }
             catch (Exception e)
             {
                 Plugin.Log.LogWarning("ReleaseCombat: " + e.Message);
             }
+        }
+
+        // The game keeps the aim camera flag set after the target is cleared, and its
+        // Handle_CameraControl is blocked while the menu is open, so it never resets itself.
+        private static void ResetAimCamera()
+        {
+            CameraFunction cam = CameraFunction._current;
+            if (cam != null) cam._unlockedCamera = false;
         }
 
         public void Close()
@@ -341,6 +356,8 @@ namespace AtlyssTrainer
             }
 
             _moveLockSaved = false;
+
+            ResetAimCamera();
 
             Cursor.lockState = _prevLock;
             Cursor.visible = _prevCursorVisible;
