@@ -521,6 +521,7 @@ namespace AtlyssTrainer
             _tabs.Add(new WorldTab());
             _tabs.Add(new TeleportTab());
             _tabs.Add(new ItemsTab());
+            _tabs.Add(new EnchantTab());
             _tabs.Add(new CreepsTab());
             _tabs.Add(new SettingsTab());
             _tabs.Add(new ExperimentalTab());

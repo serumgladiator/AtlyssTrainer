@@ -11,7 +11,7 @@ namespace AtlyssTrainer
     public class Plugin : BaseUnityPlugin
     {
         public const string Guid = "peppa.atlyss.cheatmenu";
-        public const string Version = "1.4.88";
+        public const string Version = "1.6.88";
 
         public static Plugin Instance;
         public static ManualLogSource Log;

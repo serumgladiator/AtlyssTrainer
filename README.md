@@ -49,6 +49,12 @@ The menu reads item and enemy names directly from the running game, so it works 
 - Details panel: slot, requirements, stat bonuses, description, price.
 - Add to inventory, equip, duplicate, drop (host).
 
+### Enchants
+- Pick any equipment item from the inventory and any game enchant.
+- Strength from x1 to x10 (scales the enchant's percentage and stat bonuses).
+- Glow colour: RGB picker with preview; the enchant's own colour is loaded by default.
+- Weapons and shields show the chosen glow; armour and clothing glow is not supported by the game's renderer.
+
 ### Enemies
 - Full enemy catalog with search, level and stat modifier.
 - Spawn next to the player (host), freeze AI, kill all.
